@@ -10,11 +10,11 @@ const Item = ({ title, feito }) => (
 
 export default function listatarefa(){
       const TAREFAS = [
-      {id: '1', title: 'A', feito: true},
-      {id: '2', title: 'B', feito: false},
-      {id: '3', title: 'C', feito: false},
-      {id: '4', title: 'D', feito: false},
-      {id: '5', title: 'E', feito: false}       
+      {id: '1', title: 'ABCDEFGHIJKLM', feito: false},
+      {id: '2', title: 'ZXCVNXKSHSJAK', feito: false},
+      {id: '3', title: 'CDGSUAOWOWKSI', feito: false},
+      {id: '4', title: 'DISOANDHHDYSI', feito: true},
+      {id: '5', title: 'EIASHGJMANBCH', feito: true}       
     ];
 
 return(
@@ -31,33 +31,43 @@ return(
 
 const styles = StyleSheet.create({
   container: {
-      alignItems: 'center',
-      justifyContent: 'center',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f5f5f5',
+    padding: 20,
   },
-  headerText:{
-      fontSize: 49,
-      fontWeight: 'bold',
-      marginBottom: 40,
+  headerText: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 20,
   },
   item: {
-      backgroundColor: '#ff0a0a',
-      padding: 14,
-      marginVertical: 8,
-      marginHorizontal: 16,
-    },
-    title: {
-      fontSize: 18,
-      color: '#000000',
-    },
-    doneTitle: {
-      fontSize: 18,
-      color: '#000000',
-      textDecorationLine: 'line-through',
-    },
-    doneItem: {
-      backgroundColor: '#ff0a0a',
-    },
-    notDoneItem: {
-      backgroundColor: '#fc4141',
-    },   
+    padding: 16,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 10,
+    shadowColor: '#00000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  title: {
+    fontSize: 20,
+    color: '#000000',
+    textAlign: 'center'
+  },
+  doneTitle: {
+    fontSize: 20,
+    color: '#000000',
+    textDecorationLine: 'line-through',
+  },
+  doneItem: {
+    backgroundColor: '#3fff3f',
+  },
+  notDoneItem: {
+    backgroundColor: '#ff4255',
+  },
 });
