@@ -2,8 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 
 const viagensData = [
-    { id: '1', title: 'Belo Horizonte', image: 'https://www.quintoandar.com.br/guias/wp-content/uploads/2023/01/Morar-em-Belo-Horizonte-850x561.jpg', itemText: 'A capital de Minas Gerais é conhecida por sua rica cultura e deliciosa comida.' },
-    { id: '2', title: 'Ouro Preto', image: 'https://www.infoescola.com/wp-content/uploads/2009/01/ouro-preto_560936134-1000x667.jpg', itemText: 'Cidade histórica com belos edifícios coloniais e rica herança cultural.' }
+    { id: '1', title: 'Berserk: The Golden Age Arc', image: 'https://cdn.flowpodcast.com.br/criador/2mXVl9k4sEbrBKrvwDtL/assets/images/BzIh3L6d-e.jpeg', itemText: 'Uma adaptação fiel do arco da Idade de Ouro do mangá.' },
+    { id: '2', title: 'Napoleão (2023)', image: 'https://www.leiaeassista.com.br/wp-content/uploads/2023/12/Napoleao-open-graph.jpg', itemText: 'Um drama histórico que explora a vida de Napoleão Bonaparte.' }
 ];
 
 const ViagemItem = ({ item }) => (
@@ -18,7 +18,7 @@ export default function Viagens() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headerText}>Minhas Viagens</Text>
+                <Text style={styles.headerText}>Filmes</Text>
             </View>
             <FlatList
                 data={viagensData}

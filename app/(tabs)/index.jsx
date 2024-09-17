@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f0f0f0',
+    alignItems: 'center',
   },
   header: {
     backgroundColor: '#3579E6',
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
     alignItems: 'center',
+    width: '100%',
     elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -52,13 +54,13 @@ const styles = StyleSheet.create({
   link: {
     fontSize: 18,
     color: '#FFFFFF',
-    marginVertical: 10,
+    marginVertical: 15,
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
     backgroundColor: '#3579E6',
     textAlign: 'center',
-    width: '15%', 
+    width: '35%', 
     elevation: 3, 
     shadowColor: '#000', 
     shadowOffset: { width: 0, height: 3 },
