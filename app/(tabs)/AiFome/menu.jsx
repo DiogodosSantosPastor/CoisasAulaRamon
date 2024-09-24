@@ -1,11 +1,14 @@
-import React from "react";
-import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import React, { useContext } from 'react';
+import { View, Text, StyleSheet, Image, FlatList, Button } from 'react-native';
 import { Link } from 'expo-router';
+import { AppContext } from './AppContext'; 
 
-export default function Menu(){
+export default function Menu() {
+    const addItemToCarrinho  = useContext(AppContext); 
+
     const ComidaData = [
-        { id: '1', title: 'Belo Horizonte', image: 'https://www.quintoandar.com.br/guias/wp-content/uploads/2023/01/Morar-em-Belo-Horizonte-850x561.jpg', itemText: 'A capital de Minas Gerais é conhecida por sua rica cultura e deliciosa comida.' },
-        { id: '2', title: 'Ouro Preto', image: 'https://www.infoescola.com/wp-content/uploads/2009/01/ouro-preto_560936134-1000x667.jpg', itemText: 'Cidade histórica com belos edifícios coloniais e rica herança cultural.' }
+        { id: '1', title: 'Hambúrguer', image: 'https://example.com/hamburguer.jpg', itemText: 'Delicioso hambúrguer artesanal.' },
+        { id: '2', title: 'Pizza', image: 'https://example.com/pizza.jpg', itemText: 'Pizza com borda recheada.' },
     ];
 
     const MenuItem = ({ item }) => (
@@ -13,24 +16,47 @@ export default function Menu(){
             <Image source={{ uri: item.image }} style={styles.image} />
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.itemText}>{item.itemText}</Text>
+            <Button title="Adicionar ao Carrinho" onPress={() => addItemToCarrinho(item)} />
         </View>
     );
-    
 
-    return(
+    return (
         <View style={styles.container}>
-            <View style={styles.header}>
-            <Text style={styles.headerText}>Ifome</Text>
-            </View>
             <FlatList
                 data={ComidaData}
                 renderItem={MenuItem}
                 keyExtractor={item => item.id}
             />
+            <Link href="./carrinho" style={styles.link}>
+                <Text>Ir para o Carrinho</Text>
+            </Link>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-
-})
+    container: {
+        flex: 1,
+        padding: 20,
+    },
+    item: {
+        marginBottom: 20,
+    },
+    image: {
+        width: '100%',
+        height: 150,
+        borderRadius: 8,
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    itemText: {
+        marginVertical: 8,
+    },
+    link: {
+        marginTop: 20,
+        textAlign: 'center',
+        color: 'blue',
+    },
+});
