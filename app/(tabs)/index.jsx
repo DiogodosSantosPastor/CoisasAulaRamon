@@ -9,10 +9,11 @@ export default function Lista() {
       <Text style={styles.title}>Selecione uma Atividade</Text>
       <Link href="./Banco/banco" style={styles.link}>Banco</Link>
       <Link href="./calculadora/calculadora" style={styles.link}>Calculadora</Link>
+      <Link href="./camera/camera" style={styles.link}>Câmera</Link>
       <Link href="./Lista Tarefa/listatarefa" style={styles.link}>Lista de tarefas</Link>
       <Link href="./registro/registro" style={styles.link}>Registro</Link>
       <Link href="./Seletor/seletor" style={styles.link}>Seletor</Link>
-      <Link href="./splashscreen/splashscreen" style={styles.link}>Splashscreen</Link>
+      <Link href="./memorias/memorias" style={styles.link}>Memorias</Link>
       <Link href="./sobre-mim/sobremim" style={styles.link}>Sobre Mim</Link>
       <Link href="./AiFome/menu" style={styles.link}>IFome</Link>
     </View>
